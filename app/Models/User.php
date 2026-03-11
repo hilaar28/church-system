@@ -42,6 +42,9 @@ class User extends Model {
     public function getRoleLabel() {
         $roles = [
             'admin' => 'Administrator',
+            'finance' => 'Finance',
+            'secretariat' => 'Secretariat',
+            'pastor' => 'Pastor',
             'leader' => 'Leader',
             'member' => 'Member'
         ];

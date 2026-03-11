@@ -113,7 +113,7 @@ class Auth {
             return false;
         }
         
-        $roles = ['admin' => 3, 'leader' => 2, 'member' => 1];
+        $roles = ['admin' => 6, 'finance' => 5, 'secretariat' => 4, 'pastor' => 3, 'leader' => 2, 'member' => 1];
         $userRole = $roles[$user['role']] ?? 0;
         $requiredRole = $roles[$role] ?? 0;
         
@@ -138,6 +138,9 @@ class Auth {
         // Define permissions by role
         $permissions = [
             'admin' => ['*'],
+            'finance' => ['donations.view', 'donations.add', 'donations.edit', 'expenses.view', 'expenses.add', 'expenses.edit', 'expenses.approve', 'finance.view', 'finance.summary', 'finance.report', 'reports.donations', 'reports.expenses'],
+            'secretariat' => ['members.view', 'members.add', 'members.edit', 'members.delete', 'families.view', 'families.add', 'families.edit', 'groups.view', 'groups.add', 'groups.edit', 'reports.members'],
+            'pastor' => ['members.view', 'attendance.view', 'attendance.record', 'events.view', 'events.add', 'volunteers.view', 'volunteers.manage', 'reports.attendance', 'reports.view', 'communications.view', 'communications.send'],
             'leader' => ['members.view', 'members.edit', 'groups.manage', 'attendance.record', 'volunteers.manage', 'reports.view'],
             'member' => ['profile.view', 'profile.edit', 'attendance.self']
         ];

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
-    role ENUM('admin', 'leader', 'member') DEFAULT 'member',
+    role ENUM('admin', 'finance', 'secretariat', 'pastor', 'leader', 'member') DEFAULT 'member',
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     phone VARCHAR(20),

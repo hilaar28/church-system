@@ -51,9 +51,12 @@ $isEdit = !empty($user);
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Role *</label>
                             <select class="form-select" name="role" required>
-                                <option value="admin" <?= ($user->role ?? '') == 'admin' ? 'selected' : '' ?>>Admin</option>
+                                <option value="admin" <?= ($user->role ?? '') == 'admin' ? 'selected' : '' ?>>Administrator</option>
+                                <option value="finance" <?= ($user->role ?? '') == 'finance' ? 'selected' : '' ?>>Finance</option>
+                                <option value="secretariat" <?= ($user->role ?? '') == 'secretariat' ? 'selected' : '' ?>>Secretariat</option>
+                                <option value="pastor" <?= ($user->role ?? '') == 'pastor' ? 'selected' : '' ?>>Pastor</option>
+                                <option value="leader" <?= ($user->role ?? '') == 'leader' ? 'selected' : '' ?>>Leader</option>
                                 <option value="member" <?= ($user->role ?? '') == 'member' ? 'selected' : '' ?>>Member</option>
-                                <option value="treasurer" <?= ($user->role ?? '') == 'treasurer' ? 'selected' : '' ?>>Treasurer</option>
                             </select>
                         </div>
                     </div>
