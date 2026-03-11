@@ -1,0 +1,17 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore cookies files
+cookies*.txt
+
+# Ignore test files
+test*.txt
+*.bak
