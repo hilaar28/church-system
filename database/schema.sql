@@ -509,7 +509,12 @@ INSERT INTO expense_categories (name, description, category_type) VALUES
 
 -- Insert default admin user (password: admin123)
 INSERT INTO users (username, email, password_hash, role, first_name, last_name, is_active) VALUES
-('admin', 'admin@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'admin', 'System', 'Administrator', 1);
+('admin', 'admin@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'admin', 'System', 'Administrator', 1),
+('finance', 'finance@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'finance', 'John', 'Finance', 1),
+('secretariat', 'secretariat@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'secretariat', 'Jane', 'Secretary', 1),
+('pastor', 'pastor@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'pastor', 'Rev', 'Pastor', 1),
+('leader', 'leader@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'leader', 'Mike', 'Leader', 1),
+('member', 'member@church.org', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4hvhv.zKzP5U5E1m', 'member', 'Bob', 'Member', 1);
 
 -- Insert default settings
 INSERT INTO settings (setting_key, setting_value, setting_type, description) VALUES
